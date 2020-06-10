@@ -1,0 +1,33 @@
+﻿.clear {
+    display: inline-block;
+    margin-left: 20px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.clear:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.list {
+    font-family: Verdana;
+    font-size: 16px;
+    word-spacing: 12px;
+    padding-top: 10px;
+}
+
+.btn[type=reset] {
+    margin-left:65px;
+}
+
+input {
+    width: 180px;
+}
+
+textarea {
+    width: 180px;
+    max-width: 400px;
+    max-height: 180px
+}

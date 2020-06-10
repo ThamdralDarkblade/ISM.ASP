@@ -1,0 +1,41 @@
+﻿@model MyTODO_list.Models.ListItem
+
+@{
+    ViewBag.Title = "Create";
+
+    <div class="text-danger">
+        @Html.ValidationSummary(true)
+    </div>
+}
+
+<h2>Create</h2>
+
+<div class="editor">
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description)<br />
+            @Html.EditorFor(m => m.Description)
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.Description)</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.When)<br />
+            @Html.EditorFor(m => m.When)
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.When)</span>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Duration)<br />
+            @Html.EditorFor(m => m.Duration)
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.Duration)</span>
+        </div>
+        <button class="btn btn-outline-dark" type="submit">Add</button>
+        <input class="btn btn-danger" type="reset" value="Reset"/>
+    }
+
+</div>
+<br />
+
+<div>@TempData["DataList"]</div>
+
+@{ TempData.Keep("DataList"); }
